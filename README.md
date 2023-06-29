@@ -1,4 +1,10 @@
-# Sistema de Alerta Sísmica
+![Logo de Henry](https://camo.githubusercontent.com/35b81f213ddb0e019b3567f6982d740bb2d01ae5dd712a1537e09e826e940228/68747470733a2f2f643331757a386c77666d796e38672e636c6f756466726f6e742e6e65742f4173736574732f6c6f676f2d68656e72792d77686974652d6c672e706e67)
+
+# <h1 align="center">**Sistema de Alerta Sísmica**</h1>
+
+<p align="center">
+<img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
+</p>
 
 El Perú es un país altamente sísmico debido a su ubicación en el Cinturón de Fuego del Pacífico, una región donde se libera gran parte de la energía acumulada en la Tierra. La actividad sísmica en el país está relacionada con los procesos de convergencia de placas, especialmente entre la placa de Nazca y la placa Sudamericana, lo que provoca una intensa actividad sísmica, volcánica y otros efectos asociados. Por ejemplo, el terremoto de Pisco en el año 2007 causó la muerte de aproximadamente 595 personas y dejó más de 2,800 heridos. Además, los costos materiales asociados con este terremoto ascendieron a alrededor de 3 mil millones de dólares.
 
