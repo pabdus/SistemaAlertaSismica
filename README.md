@@ -70,6 +70,7 @@ El alcance del proyecto consistirá en definir y desarrollar un modelo de predic
 - Python (Lenguaje de programación)
 - MySQL (Gestor de base de datos)
 - PowerBI (Plataforma de Business Inteligence)
+- Amazon Web Services (Sevicios cloud)
 
 ## Bibliografía
 - https://www.sgp.org.pe/alerta-peru-un-pais-altamente-sismico/
