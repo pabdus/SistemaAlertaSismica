@@ -6,9 +6,15 @@
 <img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
 </p>
 
+## Introducción
+
 El Perú es un país altamente sísmico debido a su ubicación en el Cinturón de Fuego del Pacífico, una región donde se libera gran parte de la energía acumulada en la Tierra. La actividad sísmica en el país está relacionada con los procesos de convergencia de placas, especialmente entre la placa de Nazca y la placa Sudamericana, lo que provoca una intensa actividad sísmica, volcánica y otros efectos asociados. Por ejemplo, el terremoto de Pisco en el año 2007 causó la muerte de aproximadamente 595 personas y dejó más de 2,800 heridos. Además, los costos materiales asociados con este terremoto ascendieron a alrededor de 3 mil millones de dólares.
 
 El Instituto Geofísico del Perú (IGP) ha registrado sismos durante más de 60 años y ha identificado importantes fuentes sismogénicas. Los sismos se clasifican según su profundidad en sismos de foco superficial (menor a 60 km), de foco intermedio (entre 61 y 300 km) y de foco profundo (mayor a 351 km). Estos sismos han afectado diversas áreas urbanas en el pasado, tanto en la costa como en la cordillera y en regiones como San Martín, Áncash, Junín, Ayacucho, Cusco y Arequipa.
+
+Este repositorio contiene el proyecto de Sismos, el cual tiene como objetivo la recolección, almacenamiento y análisis de datos sísmicos para mejorar la monitorización y prevención de sismos de gran magnitud. Se utilizan diversas tecnologías de AWS, incluyendo un datalake, una API, el servicio S3 de AWS y el servicio Lambda de AWS para procesar los datos y mostrarlos en un dashboard de PowerBI.
+
+
 
 ### Causas:
 Los sismos son causados por la liberación repentina de energía acumulada en la corteza terrestre. Esto puede ocurrir debido a la actividad de placas tectónicas, el movimiento de fallas geológicas, la actividad volcánica y la acción humana. Cuando la tensión en las rocas supera su resistencia, se produce una ruptura brusca, generando ondas sísmicas. Estas ondas se propagan por la Tierra, provocando un sismo. Las causas de los sismos varían según la ubicación y las características geológicas de cada región.
@@ -46,6 +52,11 @@ Beneficios para la población en general y para las autoridades encargadas de la
 
 ## Alcance
 El alcance del proyecto consistirá en definir y desarrollar un modelo de predicción de sismos basado en datos históricos y proyecciones futuras, con el objetivo de evaluar las posibles consecuencias de los sismos y su impacto en una realidad hipotética. Se abordarán diferentes aspectos relacionados con la gestión de desastres, como la recopilación y análisis de datos sísmicos, la identificación de áreas de riesgo, la estimación de posibles daños y víctimas, así como la planificación de medidas preventivas.
+
+##Diagrama ER
+El diagrama ER representa la estructura de la base de datos utilizada para almacenar los datos sísmicos. Se ha considerado la adición de una tabla "Calendar" para facilitar el seguimiento y análisis de los eventos sísmicos en función de la fecha y el tiempo.
+
+Diccionario de Datos
 
 ## Posibles KPIs
 - **Número de alertas emitidas y su tiempo de respuesta:**
