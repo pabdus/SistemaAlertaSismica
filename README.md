@@ -2,6 +2,7 @@
 
 # <h1 align="center">**Sistema de Alerta Sísmica**</h1>
 
+
 <p align="center">
 <img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
 </p>
