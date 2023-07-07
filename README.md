@@ -62,15 +62,15 @@ El diagrama ER representa la estructura de la base de datos utilizada para almac
 
 A continuación se muestra el diccionario de datos para la base de datos de Sismos:
 
-**'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.
-**'latitude':** Representa la latitud geográfica del epicentro del sismo.
-**'longitude':** Representa la longitud geográfica del epicentro del sismo.
-**'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.
-**'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).
-**'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.
-**'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.
-**'horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.
-**'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.
+**-'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.
+**-'latitude':** Representa la latitud geográfica del epicentro del sismo.
+**-'longitude':** Representa la longitud geográfica del epicentro del sismo.
+**-'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.
+**-'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).
+**-'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.
+**-'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.
+**'-horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.
+**-'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.
 
 ## Workflow
 El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
