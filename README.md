@@ -100,18 +100,18 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 ### Análisis y funcionalidad:
 Este KPI mide la eficiencia en la detección y notificación de eventos sísmicos, buscando reducir el tiempo transcurrido entre la detección inicial y la actualización de la información en al menos 5 minutos mensualmente. Un menor tiempo promedio indica una mayor agilidad en la detección y comunicación de los eventos sísmicos, lo cual es fundamental para una respuesta oportuna y la toma de medidas de seguridad por parte de la población afectada.
 ### KPI de precisión de localización:
-***Objetivo:*** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.
-***Variables utilizadas:*** 'longitude', 'latitude', 'horizontalError'
-***Análisis y funcionalidad:*** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.
+***Objetivo:*** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.  
+***Variables utilizadas:*** 'longitude', 'latitude', 'horizontalError'  
+***Análisis y funcionalidad:*** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.  
 ### Otros KPIs posibles
-***Número de sismos registrados:*** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.
+***Número de sismos registrados:*** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.  
 ***Nivel de conciencia de la población:*** Este KPI evalúa el grado de conocimiento y conciencia de la población sobre los sismos, lo cual es fundamental para una respuesta adecuada y la adopción de medidas de seguridad.
 
 ## Stack tecnológico
-***-AWS:*** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.
-***AWS Datalake:*** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.
-***AWS Lambda:*** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.
-***AWS S3:*** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.
+***-AWS:*** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
+***AWS Datalake:*** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
+***AWS Lambda:*** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.  
+***AWS S3:*** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.  
 ***PowerBI:*** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
 
 
