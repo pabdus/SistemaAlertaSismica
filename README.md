@@ -2,16 +2,16 @@
 
 # <h1 align="center">**Sistema de Alerta Sísmica**</h1>
 
-
 <p align="center">
 <img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
 </p>
-
-# Introduccion
+# Introducción
 
 El Perú es un país altamente sísmico debido a su ubicación en el Cinturón de Fuego del Pacífico, una región donde se libera gran parte de la energía acumulada en la Tierra. La actividad sísmica en el país está relacionada con los procesos de convergencia de placas, especialmente entre la placa de Nazca y la placa Sudamericana, lo que provoca una intensa actividad sísmica, volcánica y otros efectos asociados. Por ejemplo, el terremoto de Pisco en el año 2007 causó la muerte de aproximadamente 595 personas y dejó más de 2,800 heridos. Además, los costos materiales asociados con este terremoto ascendieron a alrededor de 3 mil millones de dólares.
 
 El Instituto Geofísico del Perú (IGP) ha registrado sismos durante más de 60 años y ha identificado importantes fuentes sismogénicas. Los sismos se clasifican según su profundidad en sismos de foco superficial (menor a 60 km), de foco intermedio (entre 61 y 300 km) y de foco profundo (mayor a 351 km). Estos sismos han afectado diversas áreas urbanas en el pasado, tanto en la costa como en la cordillera y en regiones como San Martín, Áncash, Junín, Ayacucho, Cusco y Arequipa.
+
+Este repositorio contiene el proyecto de Sismos, el cual tiene como objetivo la recolección, almacenamiento y análisis de datos sísmicos para mejorar la monitorización y prevención de sismos de gran magnitud. Se utilizan diversas tecnologías de AWS, incluyendo un datalake, una API, el servicio S3 de AWS y el servicio Lambda de AWS para procesar los datos y mostrarlos en un dashboard de PowerBI.
 
 ### Causas:
 Los sismos son causados por la liberación repentina de energía acumulada en la corteza terrestre. Esto puede ocurrir debido a la actividad de placas tectónicas, el movimiento de fallas geológicas, la actividad volcánica y la acción humana. Cuando la tensión en las rocas supera su resistencia, se produce una ruptura brusca, generando ondas sísmicas. Estas ondas se propagan por la Tierra, provocando un sismo. Las causas de los sismos varían según la ubicación y las características geológicas de cada región.
@@ -50,30 +50,69 @@ Beneficios para la población en general y para las autoridades encargadas de la
 ## Alcance
 El alcance del proyecto consistirá en definir y desarrollar un modelo de predicción de sismos basado en datos históricos y proyecciones futuras, con el objetivo de evaluar las posibles consecuencias de los sismos y su impacto en una realidad hipotética. Se abordarán diferentes aspectos relacionados con la gestión de desastres, como la recopilación y análisis de datos sísmicos, la identificación de áreas de riesgo, la estimación de posibles daños y víctimas, así como la planificación de medidas preventivas.
 
-## Posibles KPIs
-- **Número de alertas emitidas y su tiempo de respuesta:**
+## Diagrama ER
+El diagrama ER representa la estructura de la base de datos utilizada para almacenar los datos sísmicos. Se ha considerado la adición de una tabla "Calendar" para facilitar el seguimiento y análisis de los eventos sísmicos en función de la fecha y el tiempo.
 
-    En un periodo de 3 meses queremos a través de confirmaciones por parte de la población un aumento de 30% en la velocidad de respuesta a los mensajes de alerta. Así se muestra la efectividad de la propuesta.
-- **Reducción del número de víctimas y daños materiales en áreas de riesgo:**
+<p align="center">
+<img src="https://github.com/HolyGrace/SistemaAlertaSismica/blob/master/img/Diagrama.bmp"> 
+</p>
 
-    Confirmación del cumplimiento del protocolo preventivo de desastres, por ejemplo, mochilas de emergencia, sitios de escape señalizados, sitios de reunión de emergencias, sitios seguros dentro del recinto. Puede darse a través de un formulario de respuestas.
-    En un periodo de 3 meses confirmar un aumento positivo del 20% de llenado del formulario en la respuesta a través del llenado de formularios de prevención.
+## Diccionario de Datos
 
-- **Grado de adopción de la plataforma de alerta temprana por parte de la población:**
+A continuación se muestra el diccionario de datos para la base de datos de Sismos:
 
-    Evaluar cuánta población le dan un grado de útil a este sistema de prevención.
-    De una población de X habitantes en una primera información a cuantos les resulta positivo y a cuantos negativo. En 3 meses volver a evaluar cómo crece o disminuye la opinión con una mayor cantidad de información preventiva.
+**'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.
+**'latitude':** Representa la latitud geográfica del epicentro del sismo.
+**'longitude':** Representa la longitud geográfica del epicentro del sismo.
+**'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.
+**'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).
+**'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.
+**'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.
+**'horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.
+**'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.
 
-- **Aumento de la conciencia pública sobre los riesgos sísmicos y las medidas de prevención:**
+## Workflow
+El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
-    Evaluar cuánta población asume y toma este sistema de prevención.
-    De una población de X habitantes en una primera información cuantos asumen y cuantos no les interesa. En 3 meses volver a evaluar cómo crece o disminuye la conciencia sísmica con una mayor cantidad de información.
+### Recolección de datos:
+**a.** Se recopilan datos sísmicos de diversas fuentes, incluyendo sensores sísmicos en todo el mundo y datos históricos de sismos.
+**b.** Se realiza una extracción de datos de las APIs de las páginas del USGS y del IGP. Se descarga la información mundial de sismos de los últimos 10 años, filtrando solo los países Japón, USA y Perú, y se guarda en formato CSV.
+**c.** Se crea un ETL para subir la información al cloud y realizar las pruebas correspondientes.
+
+### Configuración inicial:
+**a.** Se crea una cuenta en AWS y se configura el cliente de terminal de AWS para levantar la infraestructura en la región OHIO-us-east-
+
+**Almacenamiento de los datos en un datalake de AWS.**
+
+**Uso de una API para acceder a los datos almacenados en el datalake.**
+
+**Procesamiento de los datos utilizando el servicio Lambda de AWS.**
+
+**Almacenamiento de los datos procesados en el servicio S3 de AWS, que es el principal servicio de almacenamiento de archivos en AWS.**
+
+**Visualización de los datos en un dashboard de PowerBI.**
+
+## KPIs (Indicadores Clave de Rendimiento)
+### KPI de reducción del tiempo de detección y notificación:
+***Objetivo:*** Reducir el tiempo promedio de detección y notificación de eventos sísmicos en 5 minutos mensualmente.
+***Variables utilizadas:*** 'time', 'updated' (USGS)
+### Análisis y funcionalidad:
+Este KPI mide la eficiencia en la detección y notificación de eventos sísmicos, buscando reducir el tiempo transcurrido entre la detección inicial y la actualización de la información en al menos 5 minutos mensualmente. Un menor tiempo promedio indica una mayor agilidad en la detección y comunicación de los eventos sísmicos, lo cual es fundamental para una respuesta oportuna y la toma de medidas de seguridad por parte de la población afectada.
+### KPI de precisión de localización:
+***Objetivo:*** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.
+***Variables utilizadas:*** 'longitude', 'latitude', 'horizontalError'
+***Análisis y funcionalidad:*** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.
+### Otros KPIs posibles
+***Número de sismos registrados:*** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.
+***Nivel de conciencia de la población:*** Este KPI evalúa el grado de conocimiento y conciencia de la población sobre los sismos, lo cual es fundamental para una respuesta adecuada y la adopción de medidas de seguridad.
 
 ## Stack tecnológico
-- Python (Lenguaje de programación)
-- MySQL (Gestor de base de datos)
-- PowerBI (Plataforma de Business Inteligence)
-- Amazon Web Services (Sevicios cloud)
+***-AWS:*** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.
+***AWS Datalake:*** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.
+***AWS Lambda:*** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.
+***AWS S3:*** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.
+***PowerBI:*** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
+
 
 ## Link de los datasets
 https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q
