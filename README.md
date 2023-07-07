@@ -62,26 +62,26 @@ El diagrama ER representa la estructura de la base de datos utilizada para almac
 
 A continuación se muestra el diccionario de datos para la base de datos de Sismos:
 
-**-'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.  
-**-'latitude':** Representa la latitud geográfica del epicentro del sismo.  
-**-'longitude':** Representa la longitud geográfica del epicentro del sismo.  
-**-'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.  
-**-'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).  
-**-'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.  
-**-'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.  
-**'-horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.  
-**-'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
+- **'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.  -
+- **'latitude':** Representa la latitud geográfica del epicentro del sismo.  
+- **'longitude':** Representa la longitud geográfica del epicentro del sismo.  
+- **'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.  
+- **'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).  
+- **'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.  
+- **'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.  
+- **'horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.  
+- **'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
 
 ## Workflow
 El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
 ### Recolección de datos:
-**a.** Se recopilan datos sísmicos de diversas fuentes, incluyendo sensores sísmicos en todo el mundo y datos históricos de sismos.
-**b.** Se realiza una extracción de datos de las APIs de las páginas del USGS y del IGP. Se descarga la información mundial de sismos de los últimos 10 años, filtrando solo los países Japón, USA y Perú, y se guarda en formato CSV.
-**c.** Se crea un ETL para subir la información al cloud y realizar las pruebas correspondientes.
+- **a.** Se recopilan datos sísmicos de diversas fuentes, incluyendo sensores sísmicos en todo el mundo y datos históricos de sismos.-
+- **b.** Se realiza una extracción de datos de las APIs de las páginas del USGS y del IGP. Se descarga la información mundial de sismos de los últimos 10 años, filtrando solo los países Japón, USA y Perú, y se guarda en formato CSV.
+- **c.** Se crea un ETL para subir la información al cloud y realizar las pruebas correspondientes.
 
 ### Configuración inicial:
-**a.** Se crea una cuenta en AWS y se configura el cliente de terminal de AWS para levantar la infraestructura en la región OHIO-us-east-
+- **a.** Se crea una cuenta en AWS y se configura el cliente de terminal de AWS para levantar la infraestructura en la región OHIO-us-east-
 
 **Almacenamiento de los datos en un datalake de AWS.**
 
@@ -95,24 +95,24 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
 ## KPIs (Indicadores Clave de Rendimiento)
 ### KPI de reducción del tiempo de detección y notificación:
-***Objetivo:*** Reducir el tiempo promedio de detección y notificación de eventos sísmicos en 5 minutos mensualmente.
-***Variables utilizadas:*** 'time', 'updated' (USGS)
+- **Objetivo:** Reducir el tiempo promedio de detección y notificación de eventos sísmicos en 5 minutos mensualmente.
+- **Variables utilizadas:** 'time', 'updated' (USGS)
 ### Análisis y funcionalidad:
 Este KPI mide la eficiencia en la detección y notificación de eventos sísmicos, buscando reducir el tiempo transcurrido entre la detección inicial y la actualización de la información en al menos 5 minutos mensualmente. Un menor tiempo promedio indica una mayor agilidad en la detección y comunicación de los eventos sísmicos, lo cual es fundamental para una respuesta oportuna y la toma de medidas de seguridad por parte de la población afectada.
 ### KPI de precisión de localización:
-***Objetivo:*** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.  
-***Variables utilizadas:*** 'longitude', 'latitude', 'horizontalError'  
-***Análisis y funcionalidad:*** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.  
+- **Objetivo:** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.  
+- **Variables utilizadas:** 'longitude', 'latitude', 'horizontalError'  
+- **Análisis y funcionalidad:** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.  
 ### Otros KPIs posibles
-***Número de sismos registrados:*** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.  
-***Nivel de conciencia de la población:*** Este KPI evalúa el grado de conocimiento y conciencia de la población sobre los sismos, lo cual es fundamental para una respuesta adecuada y la adopción de medidas de seguridad.
+- **Número de sismos registrados:** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.  
+- **Nivel de conciencia de la población:** Este KPI evalúa el grado de conocimiento y conciencia de la población sobre los sismos, lo cual es fundamental para una respuesta adecuada y la adopción de medidas de seguridad.
 
 ## Stack tecnológico
-***-AWS:*** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
-***AWS Datalake:*** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
-***AWS Lambda:*** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.  
-***AWS S3:*** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.  
-***PowerBI:*** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
+- **-AWS:** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
+- **AWS Datalake:** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
+- **AWS Lambda:** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.  
+- **AWS S3:** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.  
+- **PowerBI:** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
 
 
 ## Link de los datasets
