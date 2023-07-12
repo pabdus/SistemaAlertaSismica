@@ -118,6 +118,9 @@ Este KPI mide la eficiencia en la detección y notificación de eventos sísmico
 ## Link de los datasets
 https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q
 
+## Link del Modelo de Machine Learning de Clasificación de Sismos
+https://jersonbgb-projectfinal-group12-ml-sismos.streamlit.app/
+
 ## Bibliografía
 - https://www.sgp.org.pe/alerta-peru-un-pais-altamente-sismico/
 - https://es.statista.com/estadisticas/1379060/indice-de-riesgo-sismico-de-lo-spaises-de-america-latina-y-el-caribe/#:~:text=Seg%C3%BAn%20el%20%C3%ADndice%20de%20riesgo,%2C%20con%20un%209%2C8.
