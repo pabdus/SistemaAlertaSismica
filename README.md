@@ -6,6 +6,20 @@
 <img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
 </p>
 
+### Integrantes:
+- Pedro Cornejo Mori
+  pe.cor.12345@gmail.com
+  [ htttps](https://www.linkedin.com/in/pedro-cornejo-mori)
+- Juan Sebastian Arias Ayala
+  juansebastianarias1@gmail.com
+  [ htttps](https://www.linkedin.com/in/juan-sebastian-arias-ayala)
+- Jerson Jimenez Beltrán
+  jerson.gimenesbeltran@gmail.com
+  [ htttps](http://www.linkedin.com/in/jerson-gimenes-18978b262)
+- Pablo Alberto Duque Marín
+  pabdus3000@gmail.com
+   [ htttps](https://www.linkedin.com/in/pablo-alberto-duque-marin-426334155)
+
 # Introducción
 
 El Perú es un país altamente sísmico debido a su ubicación en el Cinturón de Fuego del Pacífico, una región donde se libera gran parte de la energía acumulada en la Tierra. La actividad sísmica en el país está relacionada con los procesos de convergencia de placas, especialmente entre la placa de Nazca y la placa Sudamericana, lo que provoca una intensa actividad sísmica, volcánica y otros efectos asociados. Por ejemplo, el terremoto de Pisco en el año 2007 causó la muerte de aproximadamente 595 personas y dejó más de 2,800 heridos. Además, los costos materiales asociados con este terremoto ascendieron a alrededor de 3 mil millones de dólares.
@@ -114,6 +128,21 @@ Este KPI mide la eficiencia en la detección y notificación de eventos sísmico
 - **AWS S3:** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.  
 - **PowerBI:** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
 
+
+## Sistema de Alertas Pro (SAP)
+
+Sistema de Alertas Pro (SAP)
+El Sistema de Alertas Pro (SAP) es una plataforma que tiene como objetivo informar a la población sobre eventos sísmicos recientes. Utiliza la tecnología de mensajes de texto (SMS) y la plataforma de Whatsapp para enviar alertas en tiempo real.
+
+Características principales:
+
+Monitoreo sísmico en tiempo real: SAP se conecta a fuentes de datos sísmicos confiables para obtener información actualizada sobre eventos sísmicos.
+
+Envío de alertas vía SMS: Cuando se detecta un sismo significativo, SAP envía mensajes de texto (SMS) a los usuarios registrados con detalles sobre el evento, como fecha, hora, ubicación y magnitud.
+
+Notificaciones a través de Whatsapp: Además de los mensajes de texto, SAP también envía notificaciones a través de la plataforma de Whatsapp para llegar a un mayor número de personas y facilitar la visualización de la información.
+
+El objetivo de SAP es brindar a la población una herramienta efectiva para estar informados sobre eventos sísmicos y tomar medidas preventivas en caso de ser necesario. La plataforma se esfuerza por garantizar la precisión y la rapidez en la entrega de alertas para aumentar la seguridad y la conciencia de la comunidad ante situaciones de riesgo.
 
 ## Link de los datasets
 https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q
