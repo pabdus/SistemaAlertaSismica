@@ -8,17 +8,25 @@
 
 ### Integrantes:
 - Pedro Cornejo Mori
+  
   pe.cor.12345@gmail.com
+  
   [ htttps](https://www.linkedin.com/in/pedro-cornejo-mori)
 - Juan Sebastian Arias Ayala
+  
   juansebastianarias1@gmail.com
+  
   [ htttps](https://www.linkedin.com/in/juan-sebastian-arias-ayala)
 - Jerson Jimenez Beltrán
+  
   jerson.gimenesbeltran@gmail.com
+  
   [ htttps](http://www.linkedin.com/in/jerson-gimenes-18978b262)
 - Pablo Alberto Duque Marín
+  
   pabdus3000@gmail.com
-   [ htttps](https://www.linkedin.com/in/pablo-alberto-duque-marin-426334155)
+  
+  [ htttps](https://www.linkedin.com/in/pablo-alberto-duque-marin-426334155)
 
 # Introducción
 
