@@ -8,9 +8,7 @@
 
 ### Integrantes:
 - Pedro Cornejo Mori
-  
   pe.cor.12345@gmail.com
-  
   [Linkedin](https://www.linkedin.com/in/pedro-cornejo-mori)
 - Juan Sebastian Arias Ayala
   
