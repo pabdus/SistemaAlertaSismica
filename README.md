@@ -100,7 +100,6 @@ A continuación se muestra el diccionario de datos para la base de datos de Sism
 <img src="https://github.com/pabdus/SistemaAlertaSismica/blob/master/img/aws.jpeg"> 
 </p>
 
-https://github.com/pabdus/SistemaAlertaSismica/blob/master/img/aws.jpeg
 El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
 ### Recolección de datos:
