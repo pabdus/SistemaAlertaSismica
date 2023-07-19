@@ -95,6 +95,12 @@ A continuación se muestra el diccionario de datos para la base de datos de Sism
 - **'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
 
 ## Workflow
+
+<p align="center">
+<img src="https://github.com/pabdus/SistemaAlertaSismica/blob/master/img/aws.jpeg"> 
+</p>
+
+https://github.com/pabdus/SistemaAlertaSismica/blob/master/img/aws.jpeg
 El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
 ### Recolección de datos:
