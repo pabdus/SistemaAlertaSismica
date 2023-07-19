@@ -9,7 +9,7 @@ import csv
 account_sid = 'AC7b251f302c1219ff41ce9cfecf982895'
 auth_token = 'c03648c464c3ab1abc71d5c15764681e'
 twilio_whatsapp_number = 'whatsapp:+14155238886'
-twilio_sms_number = '+12056228055'  # Reemplazar con tu número de Twilio para SMS
+twilio_sms_number = '+12056228055'  
 recipient_phone_number = '+573229418057'
 recipient_whatsapp_number = 'whatsapp:+573229418057'
 
